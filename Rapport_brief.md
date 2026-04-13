@@ -67,7 +67,7 @@ Résultat du script : app2.py
 <img width="950" height="92" alt="image" src="https://github.com/user-attachments/assets/5bc2eb13-a163-4635-8930-5b6148737a42" />
 
 
-## 6. Résultat code Python
+## 7. Graphiques Plotly
 ### a. Ventes par produit
 <img width="1512" height="716" alt="newplot (1)" src="https://github.com/user-attachments/assets/7dd09758-760e-4d2f-a400-f551e5a400f5" />
 
