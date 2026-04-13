@@ -62,6 +62,7 @@ Résultat :
 
 
 ## 3. Résultat code Python
+Résultat du script : app2.py
 
 <img width="950" height="92" alt="image" src="https://github.com/user-attachments/assets/5bc2eb13-a163-4635-8930-5b6148737a42" />
 
