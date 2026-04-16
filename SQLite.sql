@@ -1,12 +1,24 @@
+-- vérification du jeu de données
 SELECT * FROM ventes;
 
 -- Chiffre d'affaire total
-select sum(prix*qte) from ventes;
+SELECT
+  SUM(prix * qte) AS "Chiffre d'affaire"
+FROM ventes;
 
 -- ventes par produit
-select produit, prix as "prix unitaire", sum(qte) as "quantité", sum(prix*qte) as "prix total" from ventes
-group by produit;
+SELECT
+  produit,
+  prix AS "prix unitaire",
+  SUM(qte) AS "quantité",
+  SUM(prix * qte) AS "prix total"
+FROM ventes
+GROUP BY produit;
 
 -- ventes par région
-select region, sum(qte) as "quantité", sum(prix*qte) as "prix total" from ventes
-group by region;
+SELECT
+  region,
+  SUM(qte) AS "quantité",
+  SUM(prix * qte) AS "prix total"
+FROM ventes
+GROUP BY region;
