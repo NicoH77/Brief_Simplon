@@ -68,6 +68,7 @@ GROUP BY produit;
 ```
 
 Résultat :
+
 <img width="913" height="175" alt="image" src="https://github.com/user-attachments/assets/bfd4f87f-0b34-4cc2-98d8-eea2e558b2b3" />
 
 
@@ -83,6 +84,7 @@ FROM ventes
 GROUP BY region;
 ```
 Résultat :
+
 <img width="878" height="122" alt="image" src="https://github.com/user-attachments/assets/326431e2-515d-4993-9e38-4f55de28f8be" />
 
 
@@ -100,16 +102,50 @@ Cette étape correspond à l'instanciation de l'environnementde travail sur Code
 
 Les résultats indiqués dans ce paragraphe ont été produits à partir du script `app.py`.
 
-* Chiffre d’affaires par produit :
-** moyenne
-** médiane
+- Chiffre d’affaires par produit :
+	- moyenne
+						prix_total
+		produit               
+		Produit A  1250.000000
+		Produit B  1217.307692
+		Produit C   958.333333
 
-Volume des ventes par produit :
-** moyenne
-** médiane
-** écart-type
-** variance
+	- médiane
+				   prix_total
+		produit              
+		Produit A      1225.0
+		Produit B      1200.0
+		Produit C       900.0
 
+
+- Volume des ventes par produit :
+	- moyenne
+		                  qte
+		produit              
+		Produit A  125.000000
+		Produit B   81.153846
+		Produit C   47.916667
+
+	- médiane
+					 qte
+		produit         
+		Produit A  122.5
+		Produit B   80.0
+		Produit C   45.0	
+		
+	- écart-type
+						 qte
+		produit             
+		Produit A  38.078866
+		Produit B  21.228307
+		Produit C  17.895953
+
+	- variance
+						   qte
+		produit               
+		Produit A  1450.000000
+		Produit B   450.641026
+		Produit C   320.265152
 
 
 
@@ -157,6 +193,28 @@ figure_ca.write_html('ca-par-produit.html')
 
 ## 7. Synthèse
 
+Le chiffre d'affaire global des ventes entre le 01/01/2022 et le 20/01/2022 est de 44 825.
+
+Les explorations du jeu de données effectuées lors de cet exercice montrent que la région Sud est légèrement plus contributrice en quantité et montant des ventes
+
+L'analyse indique que le produit A (le moins cher en prix unitaire) est le plus vendu en nombre de ventes et génère le chiffre d'affaires le plus important (17 500). Cependant, ce produit présente la plus forte variabilité du volume des ventes (variance = 38).
+
+A contrario, le produit C (le plus cher) est le produit le moins vendu en nombre et génère le chiffre d'affaire le moins important (11 500). Mais il présente une plus faible variabilité du volume des ventes (variance 17,8).
+
+Enfin, notons que le produit A est plus vendu au Nord (880 unités) qu'au Sud (870 unités), contrairement aux produits B et C qui sont plus vendus au Sud.
 
 
+## Annexe
+
+Requête SQL supplémentaire : calcul des ventes par Région et par produit
+
+```sql
+SELECT
+  produit,
+  prix AS "prix unitaire",
+  SUM(qte) AS "quantité",
+  SUM(prix * qte) AS "prix total"
+FROM ventes
+GROUP BY produit;
+```
 
