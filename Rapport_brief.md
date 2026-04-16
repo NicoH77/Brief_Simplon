@@ -1,6 +1,6 @@
 # Rapport d’exercice – Analyse des ventes
 
-Cet exercice a pour objectif d’analyser un jeu de données de ventes à partir de requêtes SQL simples.
+Cet exercice a pour objectif d’analyser un jeu de données de ventes à partir de requêtes SQL et de scripts python.
 
 ## 1. Import du jeu de données
 
@@ -32,6 +32,9 @@ La requête suivante permet de vérifier que l'ensemble des lignes du fichier on
 SELECT count(*) FROM ventes;
 ```
 
+		| count(*)  |
+		|-----------|	
+		| 39        |
 
 ---
 
@@ -210,11 +213,11 @@ Requête SQL supplémentaire : calcul des ventes par Région et par produit
 
 ```sql
 SELECT
+  region,
   produit,
-  prix AS "prix unitaire",
   SUM(qte) AS "quantité",
   SUM(prix * qte) AS "prix total"
 FROM ventes
-GROUP BY produit;
+GROUP BY region, produit;
 ```
 
