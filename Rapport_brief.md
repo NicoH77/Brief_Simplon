@@ -104,49 +104,49 @@ Les résultats indiqués dans ce paragraphe ont été produits à partir du scri
 
 - Chiffre d’affaires par produit :
 	- moyenne
-						prix_total
-		produit               
-		Produit A  1250.000000
-		Produit B  1217.307692
-		Produit C   958.333333
+		| produit   | prix_total  |
+		|-----------|-------------|
+		| Produit A | 1250.000000 |
+		| Produit B | 1217.307692 |
+		| Produit C | 958.333333  |
 
 	- médiane
-				   prix_total
-		produit              
-		Produit A      1225.0
-		Produit B      1200.0
-		Produit C       900.0
-
+		| produit   | prix_total |
+		|-----------|------------|
+		| Produit A | 1225.0     |
+		| Produit B | 1200.0     |
+		| Produit C | 900.0      |
 
 - Volume des ventes par produit :
 	- moyenne
-		                  qte
-		produit              
-		Produit A  125.000000
-		Produit B   81.153846
-		Produit C   47.916667
+		| produit   | qte        |
+		|-----------|------------|
+		| Produit A | 125.000000 |
+		| Produit B | 81.153846  |
+		| Produit C | 47.916667  |
 
 	- médiane
 					 qte
 		produit         
-		Produit A  122.5
-		Produit B   80.0
-		Produit C   45.0	
+		| produit   | qte   |
+		|-----------|-------|
+		| Produit A | 122.5 |
+		| Produit B | 80.0  |
+		| Produit C | 45.0  |	
 		
 	- écart-type
-						 qte
-		produit             
-		Produit A  38.078866
-		Produit B  21.228307
-		Produit C  17.895953
+		| produit   | qte       |
+		|-----------|-----------|
+		| Produit A | 38.078866 |
+		| Produit B | 21.228307 |
+		| Produit C | 17.895953 |
 
 	- variance
-						   qte
-		produit               
-		Produit A  1450.000000
-		Produit B   450.641026
-		Produit C   320.265152
-
+		| produit   | qte       |
+		|-----------|-----------|
+		| Produit A | 38.078866 |
+		| Produit B | 21.228307 |
+		| Produit C | 17.895953 |
 
 
 
