@@ -20,9 +20,9 @@ print(données[["produit","qte"]].groupby("produit").mean())
 # Volume des ventes médian par produit
 print(données[["produit","qte"]].groupby("produit").median())
 
-# Écart-type et variance du chiffre d'affaire par produit
-print(données[["produit","prix_total"]].groupby("produit").std())
-print(données[["produit","prix_total"]].groupby("produit").var())
+# Écart-type et variance du volume de vente par produit
+print(données[["produit","qte"]].groupby("produit").std())
+print(données[["produit","qte"]].groupby("produit").var())
 
 # Graphique de la répartition des ventes par produit
 figure_qte = px.pie(données, values='qte', names='produit', title='quantité vendue par produit')
