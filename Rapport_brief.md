@@ -67,7 +67,7 @@ SELECT
   SUM(qte) AS "quantité",
   SUM(prix * qte) AS "prix total"
 FROM ventes
-GROUP BY produit;
+GROUP BY produit, prix;
 ```
 
 Résultat :

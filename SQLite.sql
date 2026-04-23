@@ -1,3 +1,5 @@
+-- Requêtes SQL pour analyse des ventes
+
 -- vérification du jeu de données
 SELECT * FROM ventes;
 
